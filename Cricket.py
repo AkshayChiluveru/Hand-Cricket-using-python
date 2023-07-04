@@ -15,4 +15,28 @@ def main():
     else:
         print("Invalid choice")
         main()
-        
+
+
+def bat():
+    print("You are going to bat first")
+    print("Enter a number between 1 and 6: ")
+    score = 0
+    while True:
+        user = int(input("Choose a number: "))
+        if user == 0:
+            print("Your score is ", score)
+            break
+        elif user <1 and user > 6:
+            print("Invalid number")
+            continue
+        else:
+            computer = random.randint(1,6)
+            print("Computer chose", computer)
+            if user == computer:
+                print("You are out")
+                print("Your score is", score)
+                break
+            else:
+                score += user
+                print("Your score is", score)
+
