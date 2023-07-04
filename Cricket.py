@@ -40,3 +40,30 @@ def bat():
                 score += user
                 print("Your score is", score)
 
+def bowl():
+    print("You are bowling")
+    print("Enter a number between 1 and 6")
+    print("Enter 0 to quit")
+    score = 0
+    while True:
+        computer = random.randint(1, 6)
+        print("Computer chose", computer)
+        user = int(input("Choose a number: "))
+        if user == 0:
+            print("Computer score is", score)
+            break
+        elif user < 1 or user > 6:
+            print("Invalid input")
+            continue
+        else:
+            if user == computer:
+                print("Computer is out")
+                print("Computer score is", score)
+                break
+            else:
+                score += computer
+                print("Computer score is", score)
+
+
+if __name__ == "__main__":
+    main()
